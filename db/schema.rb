@@ -12,11 +12,11 @@
 ActiveRecord::Schema.define(:version => 20090614160335) do
 
   create_table "analyses", :force => true do |t|
+    t.integer  "session_id",            :null => false
+    t.integer  "sample_size",           :null => false
     t.integer  "trials",                :null => false
     t.integer  "hits",                  :null => false
-    t.integer  "sample_size",           :null => false
     t.decimal  "accumulated_deviation", :null => false
-    t.integer  "session_id",            :null => false
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
   end
@@ -74,15 +74,15 @@ ActiveRecord::Schema.define(:version => 20090614160335) do
   end
 
   create_table "trials", :force => true do |t|
-    t.integer  "sender_selection_time",          :null => false
-    t.integer  "receiver_response_time",         :null => false
-    t.boolean  "hit",                            :null => false
-    t.integer  "session_id",                     :null => false
-    t.integer  "receiver_id",                    :null => false
-    t.integer  "sender_selected_sample_id",      :null => false
-    t.integer  "receiver_selected_sample_id_id", :null => false
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.integer  "session_id",                  :null => false
+    t.integer  "receiver_id",                 :null => false
+    t.integer  "sender_selection_time",       :null => false
+    t.integer  "receiver_response_time",      :null => false
+    t.integer  "sender_selected_sample_id",   :null => false
+    t.integer  "receiver_selected_sample_id", :null => false
+    t.boolean  "hit",                         :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "users", :force => true do |t|

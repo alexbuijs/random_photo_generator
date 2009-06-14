@@ -4,11 +4,11 @@
 # Table name: analyses
 #
 #  id                    :integer         not null, primary key
+#  session_id            :integer(0)      not null
+#  sample_size           :integer(0)      not null
 #  trials                :integer(0)      not null
 #  hits                  :integer(0)      not null
-#  sample_size           :integer(0)      not null
 #  accumulated_deviation :decimal(, )     not null
-#  session_id            :integer(0)      not null
 #  created_at            :datetime        not null
 #  updated_at            :datetime        not null
 #
