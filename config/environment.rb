@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   #config.gem 'glassfish-0.9.3-universal-java', :lib => 'glassfish'
   config.gem 'activerecord-jdbcsqlite3-adapter', :lib => 'jdbc_adapter'
   config.gem 'authlogic'
+  config.gem "resourcelogic"
   config.gem 'image_voodoo'
   config.gem 'mbleigh-acts-as-taggable-on', :lib => 'acts-as-taggable-on'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate'

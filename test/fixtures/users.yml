@@ -1,0 +1,28 @@
+# == Schema Information
+# Schema version: 20090614160335
+#
+# Table name: users
+#
+#  id                 :integer         not null, primary key
+#  login              :string(0)       not null
+#  crypted_password   :string(0)       not null
+#  password_salt      :string(0)       not null
+#  persistence_token  :string(0)       not null
+#  login_count        :integer(0)      default(0), not null
+#  failed_login_count :integer(0)      default(0), not null
+#  current_login_at   :datetime        not null
+#  last_login_at      :datetime        not null
+#  current_login_ip   :string(0)       not null
+#  last_login_ip      :string(0)       not null
+#  role               :integer(0)      not null
+#  created_at         :datetime        not null
+#  updated_at         :datetime        not null
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
