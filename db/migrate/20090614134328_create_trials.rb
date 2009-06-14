@@ -1,14 +1,13 @@
 class CreateTrials < ActiveRecord::Migration
   def self.up
     create_table :trials do |t|
-      t.integer :sender_selection_time
-      t.integer :receiver_response_time
-      t.boolean :hit
-
-      t.references :session
-      t.references :receiver
-      t.references :sender_selected_sample
-      t.references :receiver_selected_sample_id
+      t.references  :session
+      t.references  :receiver
+      t.integer     :sender_selection_time
+      t.integer     :receiver_response_time
+      t.references  :sender_selected_sample
+      t.references  :receiver_selected_sample
+      t.boolean     :hit
 
       t.timestamps
     end

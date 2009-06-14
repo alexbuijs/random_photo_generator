@@ -8,9 +8,9 @@ class CreateSessions < ActiveRecord::Migration
       t.integer :recovery_time
       t.integer :trial_size
       t.integer :sample_size
-      t.string :genre
-      t.string :type
-      t.float :genre_type_ratio
+      t.string  :genre
+      t.string  :type
+      t.float   :genre_type_ratio
       t.boolean :sampling_with_replacement
 
       t.timestamps
