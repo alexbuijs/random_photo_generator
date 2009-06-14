@@ -24,4 +24,12 @@ class Session < ActiveRecord::Base
   belongs_to :sender, :class_name => "User"
   has_many :receivers, :through => :trials
   has_one :analysis
+
+  validates_presence_of :sender
+  validates_length_of :max_sender_selection_time, :within => 1..300
+  validates_length_of :sender_focus_time, :within => 1..300
+  validates_length_of :max_receiver_response_time, :within => 1..300
+  validates_length_of :recovery_time, :within => 1..300
+  validates_length_of :trial_size, :within => 1..100
+  validates_length_of :sample_size, :within => 2..20
 end

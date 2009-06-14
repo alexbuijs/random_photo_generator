@@ -1,7 +1,7 @@
 class CreateAnalyses < ActiveRecord::Migration
   def self.up
     create_table :analyses do |t|
-      t.references  :session
+      t.references  :session,             :null => false
       t.integer     :sample_size
       t.integer     :trials
       t.integer     :hits

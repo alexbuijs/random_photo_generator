@@ -21,4 +21,18 @@ class Trial < ActiveRecord::Base
   belongs_to :sender_selected_sample, :class_name => "Sample"
   belongs_to :receiver_selected_sample, :class_name => "Sample"
   has_and_belongs_to_many :receivers
+
+  before_save :set_hit
+
+  validates_presence_of :session
+  validates_presence_of :receiver
+  validates_presence_of :sender_selected_sample
+  validates_presence_of :receiver_selected_sample
+
+  private
+
+  def set_hit
+    self.hit = sender_selected_sample_id == receiver_selected_sample_id
+    return true
+  end
 end

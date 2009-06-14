@@ -41,19 +41,19 @@ ActiveRecord::Schema.define(:version => 20090614160335) do
   end
 
   create_table "sessions", :force => true do |t|
-    t.integer  "sender_id",                  :null => false
-    t.integer  "max_sender_selection_time",  :null => false
-    t.integer  "sender_focus_time",          :null => false
-    t.integer  "max_receiver_response_time", :null => false
-    t.integer  "recovery_time",              :null => false
-    t.integer  "trial_size",                 :null => false
-    t.integer  "sample_size",                :null => false
-    t.string   "genre",                      :null => false
-    t.string   "type",                       :null => false
-    t.decimal  "genre_type_ratio",           :null => false
-    t.boolean  "sampling_with_replacement",  :null => false
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.integer  "sender_id",                                    :null => false
+    t.integer  "max_sender_selection_time",  :default => 10,   :null => false
+    t.integer  "sender_focus_time",          :default => 30,   :null => false
+    t.integer  "max_receiver_response_time", :default => 30,   :null => false
+    t.integer  "recovery_time",              :default => 15,   :null => false
+    t.integer  "trial_size",                                   :null => false
+    t.integer  "sample_size",                                  :null => false
+    t.string   "genre",                                        :null => false
+    t.string   "type",                                         :null => false
+    t.decimal  "genre_type_ratio",                             :null => false
+    t.boolean  "sampling_with_replacement",  :default => true, :null => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
   end
 
   create_table "taggings", :force => true do |t|
